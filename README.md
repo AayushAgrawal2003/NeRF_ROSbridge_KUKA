@@ -5,6 +5,4 @@
 - [ ] Write the bridge to transfer data to the NeRF model 
 - [ ] Test model output in rviz(Scale and Surface area) 
 - [ ] Automate the path planning for automated data collection 
-- [ ] 
-
 
