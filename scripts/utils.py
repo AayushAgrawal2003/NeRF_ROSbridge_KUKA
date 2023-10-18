@@ -1,17 +1,9 @@
 #!/usr/bin/env python  
-import roslib
 import rospy
-import math
 import tf2_ros
-import PyKDL
-import geometry_msgs.msg
-from math import pi
 import numpy as np
-from tf import transformations
 
 from tf.transformations import translation_matrix, quaternion_matrix
-
-
 
 
 
@@ -35,11 +27,8 @@ def get_camera_transform():
             # Combine the translation and rotation matrices to get the 4x4 transformation matrix
             transformation_matrix = np.dot(matrix, rotation_matrix)
 
-            print(transformation_matrix)
-            break
+            return(transformation_matrix)
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
             print("Fail", e)
     
         rate.sleep()   
-
-get_camera_transform()
