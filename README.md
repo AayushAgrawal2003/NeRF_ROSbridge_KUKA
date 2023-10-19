@@ -2,7 +2,7 @@
 # TODO:
 - [X] Make a bridge to convert data from camera position in iiwa to NeRF format
     - [X] Convert camera position data to transformation 
-    - [-] Calculate the blur value for the images
+    - [X] Calculate the blur value for the images
     - [X] Generate the JSON file
     - [X] Capture frames from camera 
 - [ ] Generate sample data for the rosbag
