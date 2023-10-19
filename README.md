@@ -2,7 +2,8 @@
 # TODO:
 - [ ] Make a bridge to convert data from camera position in iiwa to NeRF format
     - [X] Convert camera position data to transformation 
-    - [ ] 
+    - [ ] Calculate the blur value for the images
+    - [ ] Generate the JSON file
 
 - [ ] Train a model that can use this generated data
 - [ ] Write the bridge to transfer data to the NeRF model 

@@ -44,3 +44,30 @@ def create_json(dict):
     with open("/Users/aayushagrawal/Desktop/Abhiyaan/ros_ws/caktin_ws/src/ros_nerf_bridge/json/test.json", "w") as outfile: 
         json.dump(dict,outfile)
     return 
+
+
+def dictionary_generate():
+
+    dict = {
+        "camera_angle_x": 0.7481849417937728,
+        "camera_angle_y": 1.2193576119562444,
+        "fl_x": 1375.52,
+        "fl_y": 1374.49,
+        "k1": 0.0578421,
+        "k2": -0.0805099,
+        "p1": -0.000980296,
+        "p2": 0.00015575,
+        "cx": 554.558,
+        "cy": 965.268,
+        "w": 1080.0,
+        "h": 1920.0,
+        "aabb_scale": 4,
+        "frames": []
+    }
+
+
+def get_frame():
+    pass 
+
+def frame_sharpness():
+    pass
