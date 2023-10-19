@@ -4,26 +4,13 @@ import rospy
 import tf2_ros
 import numpy as np
 import json
-from cv_bridge import CvBridge
-import cv2
-from sensor_msgs.msg import Image
+
 
 from tf.transformations import translation_matrix, quaternion_matrix
 
 # from ros_numpy import numpify
-global image_number
 
-image_number = 0
 
-def image_callback(msg):
-    bridge = CvBridge()
-    try:
-        # Convert the ROS Image message to a OpenCV image
-        cv_image = bridge.imgmsg_to_cv2(msg)
-        cv2.imwrite("/Users/aayushagrawal/Desktop/Abhiyaan/ros_ws/caktin_ws/src/ros_nerf_bridge/data/test/" + str(image_number).zfill(3)+ ".jpg" , cv_image)
-    except Exception as e:
-        rospy.logerr("Error converting ROS Image to OpenCV image: %s", str(e))
-        return
 
 
 def get_camera_transform():
@@ -57,7 +44,7 @@ def get_camera_transform():
 
 def create_json(dict):
     # import library to convert dict to json
-    with open("/Users/aayushagrawal/Desktop/Abhiyaan/ros_ws/caktin_ws/src/ros_nerf_bridge/json/test.json", "w") as outfile: 
+    with open("/home/inspire_01/catkin_ws/src/NeRF_ROSbridge_KUKA/json/test.json", "w") as outfile: 
         json.dump(dict,outfile)
     return 
 
@@ -83,10 +70,7 @@ def dictionary_generate():
 
     return dict
 
-def get_frame():
-    image_number += 1 
-    rospy.init_node('image_listener')
-    rospy.Subscriber("/rgb", Image, image_callback)
+
 
 def frame_sharpness():
     pass
